@@ -66,19 +66,28 @@ class HomeFilter extends StatelessWidget {
           height: 1800,
           // color: Colors.amber,
           child: Padding(
-            padding: const EdgeInsets.only(
-              top: 10,
-              right: 10,
-            ),
-            child: IconButton(
-              alignment: Alignment.topRight,
-              icon: const Icon(
-                Icons.cancel_sharp,
-                color: Color(0xff5C83B6),
+              padding: const EdgeInsets.only(
+                top: 10,
+                right: 10,
               ),
-              onPressed: () => Navigator.pop(context),
-            ),
-          ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    alignment: Alignment.topRight,
+                    icon: const Icon(
+                      Icons.cancel_sharp,
+                      color: Color(0xff5C83B6),
+                    ),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                  const Placeholder(
+                    fallbackWidth: double.infinity,
+                    fallbackHeight: 400,
+                  )
+                ],
+              )),
         );
       },
     );

@@ -12,21 +12,18 @@ class BannerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 60),
-      child: SizedBox(
-        height: 136,
-        child: PageView.builder(
-          controller: _pageController,
-          scrollDirection: Axis.horizontal,
-          itemCount: bannerList.length,
-          itemBuilder: (context, index) {
-            return Image.asset(
-              'assets/images/${bannerList[index]}',
-              fit: BoxFit.fill,
-            );
-          },
-        ),
+    return SizedBox(
+      height: 136,
+      child: PageView.builder(
+        controller: _pageController,
+        scrollDirection: Axis.horizontal,
+        itemCount: bannerList.length,
+        itemBuilder: (context, index) {
+          return Image.asset(
+            'assets/images/${bannerList[index]}',
+            fit: BoxFit.fill,
+          );
+        },
       ),
     );
   }
